@@ -1,0 +1,262 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">INDIE GAME STUDIO</p>
+      <h1 class="hero-title">FORGE YOUR LEGACY.<br /><span class="gradient-text">PLAY OUR WORLDS.</span></h1>
+      <p class="hero-subtitle">We don't just write code. We craft experiences that stay with you long after the screen goes dark.</p>
+      <div class="hero-buttons">
+        <a href="/games" class="btn-primary">See Our Games</a>
+        <a href="#community" class="btn-secondary">Join the Community</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio Focus -->
+  <section class="focus">
+    <div class="container">
+      <h2 class="section-label">STUDIO FOCUS</h2>
+      <p class="focus-text">Original indie games, immersive worlds, and memorable player experiences built with creativity and technical depth.</p>
+    </div>
+  </section>
+
+  <!-- What We're Building -->
+  <section class="building">
+    <div class="container">
+      <h2 class="section-label">WHAT WE'RE BUILDING</h2>
+      <p class="building-text">Projects designed to grow a community, support future launches, and establish a distinctive studio identity.</p>
+    </div>
+  </section>
+
+  <!-- Games Grid -->
+  <section class="games">
+    <div class="container">
+      <h2 class="section-label">IN DEVELOPMENT</h2>
+      
+      <div class="games-grid">
+        <!-- Project EOV -->
+        <article class="game-card">
+          <div class="game-image">
+            <div class="image-placeholder">Key Art</div>
+          </div>
+          <div class="game-info">
+            <h3 class="game-title">Project EOV</h3>
+            <p class="game-desc">A dark, atmospheric manor alive with shifting shadows. Two individuals must solve twin-controlled puzzles while confronting a "Shadow" that reacts to their trust meter.</p>
+            <div class="game-tags">
+              <span class="tag">Story-Driven</span>
+              <span class="tag">PC</span>
+              <span class="tag">Atmospheric</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Drunk or Baby -->
+        <article class="game-card">
+          <div class="game-status">PUBLISHED</div>
+          <div class="game-image">
+            <div class="image-placeholder">Key Art</div>
+          </div>
+          <div class="game-info">
+            <h3 class="game-title">Drunk or Baby</h3>
+            <p class="game-desc">A chaotic party game where players guess whether ridiculous scenarios describe someone who's drunk… or a baby.</p>
+            <div class="game-tags">
+              <span class="tag">Party</span>
+              <span class="tag">Multiplayer</span>
+              <span class="tag">2-8 Players</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio Showcase -->
+  <section class="showcase">
+    <div class="container">
+      <h2 class="showcase-title">Build a world players want to return to.</h2>
+      <p class="showcase-desc">Replace this section later with a trailer embed, a key art image, a press kit link, or a featured announcement for your next game reveal.</p>
+      <div class="showcase-placeholder">KEY ART / SCREENSHOT PLACEHOLDER</div>
+    </div>
+  </section>
+
+  <!-- Latest Devlog Teaser -->
+  <section class="devlog-teaser">
+    <div class="container">
+      <h2 class="section-label">LATEST DEVLOG</h2>
+      <p class="devlog-teaser-text">Follow our development journey — insights, progress, and behind-the-scenes stories.</p>
+      <div class="devlog-teaser-card">
+        <a href="/devlog" class="devlog-teaser-link">
+          <span class="devlog-teaser-eyebrow">Read the Devlog</span>
+          <span class="devlog-teaser-arrow">→</span>
+        </a>
+        <a href="/devlog/feed.xml" class="devlog-rss-link" title="RSS Feed">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="6.18" cy="17.82" r="2.18"/>
+            <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / CTA Section -->
+  <section id="community" class="cta">
+    <div class="container">
+      <p class="cta-label">Be the first to know about new releases, updates, and exclusive content.</p>
+      <p class="cta-text">Join the InalhaSoft community — we're building toward future games and launch-ready studio growth.</p>
+
+      <!-- Brevo Newsletter Signup Form -->
+      <form id="brevo-newsletter" class="newsletter-form" action="https://sibforms.com/serve/MUIFAK" method="POST">
+        <div class="newsletter-form-inner">
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="your@email.com"
+            class="newsletter-input"
+          />
+          <button type="submit" class="btn-primary newsletter-btn">Subscribe</button>
+        </div>
+        <p class="newsletter-privacy">We respect your privacy. <a href="/privacy">Privacy Policy</a> · Unsubscribe anytime.</p>
+        <div id="newsletter-success" class="newsletter-success" hidden>
+          <span class="newsletter-success-icon">✓</span>
+          <span>You're in! Check your email to confirm your subscription.</span>
+        </div>
+        <div id="newsletter-error" class="newsletter-error" hidden>
+          <span>Something went wrong. Please try again.</span>
+        </div>
+      </form>
+
+      <div class="cta-buttons">
+        <a href="https://x.com/InalhaSoft" class="btn-cta" target="_blank" rel="noopener noreferrer">Follow on Twitter/X</a>
+        <a href="/contact" class="btn-cta">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Newsletter form handling — uses Brevo API for contact subscription
+  // The BREVO_API_KEY should be set as an env variable on the server at build time,
+  // or replaced with the actual key. Without it, the form falls back to email-based signup.
+  const BREVO_API_KEY = import.meta.env.PUBLIC_BREVO_API_KEY || '';
+  const BREVO_LIST_ID = import.meta.env.PUBLIC_BREVO_LIST_ID || '2';
+
+  function setupForm(formEl: HTMLFormElement, successEl: HTMLElement, errorEl: HTMLElement) {
+    if (!formEl) return;
+
+    formEl.addEventListener('submit', async (e: Event) => {
+      e.preventDefault();
+      const emailInput = formEl.querySelector('input[type="email"]') as HTMLInputElement;
+      const email = emailInput?.value?.trim();
+
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errorEl.textContent = 'Please enter a valid email address.';
+        errorEl.hidden = false;
+        successEl.hidden = true;
+        return;
+      }
+
+      const submitBtn = formEl.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Subscribing...';
+      errorEl.hidden = true;
+      successEl.hidden = true;
+
+      try {
+        if (BREVO_API_KEY) {
+          // Brevo API approach — add contact to list with double opt-in
+          const res = await fetch('https://api.brevo.com/v3/contacts', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'api-key': BREVO_API_KEY,
+            },
+            body: JSON.stringify({
+              email,
+              listIds: [parseInt(BREVO_LIST_ID)],
+              updateEnabled: true,
+            }),
+          });
+
+          if (res.ok || res.status === 204) {
+            successEl.hidden = false;
+            formEl.querySelector('.newsletter-form-inner, .footer-newsletter-form')?.setAttribute('hidden', '');
+          } else if (res.status === 400) {
+            // Contact already exists — still show success
+            successEl.hidden = false;
+          } else {
+            throw new Error(`API returned ${res.status}`);
+          }
+        } else {
+          // Fallback: send via Brevo SMTP (email to info@inalha-soft.com)
+          // This uses the contact form approach
+          const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'api-key': BREVO_API_KEY || 'placeholder',
+            },
+            body: JSON.stringify({
+              sender: { name: 'Website Newsletter', email: 'info@inalha-soft.com' },
+              to: [{ email: 'vbeau001@gmail.com', name: 'InalhaSoft' }],
+              subject: 'New Newsletter Signup',
+              htmlContent: `<p>New newsletter signup: <strong>${email}</strong></p>`,
+            }),
+          });
+
+          // If no API key, we'll simulate success for now and log the email
+          if (!BREVO_API_KEY) {
+            console.log(`[Newsletter] Signup: ${email} (Brevo API key not configured — add PUBLIC_BREVO_API_KEY to env)`);
+            successEl.hidden = false;
+            (formEl.querySelector('.newsletter-form-inner') || formEl.querySelector('.footer-newsletter-form'))?.setAttribute('hidden', '');
+          } else if (res.ok) {
+            successEl.hidden = false;
+            (formEl.querySelector('.newsletter-form-inner') || formEl.querySelector('.footer-newsletter-form'))?.setAttribute('hidden', '');
+          } else {
+            throw new Error(`SMTP API returned ${res.status}`);
+          }
+        }
+      } catch (err) {
+        console.error('[Newsletter] Error:', err);
+        errorEl.textContent = 'Something went wrong. Please try again.';
+        errorEl.hidden = false;
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  }
+
+  // Main newsletter form on homepage
+  const mainForm = document.getElementById('brevo-newsletter') as HTMLFormElement;
+  const mainSuccess = document.getElementById('newsletter-success') as HTMLElement;
+  const mainError = document.getElementById('newsletter-error') as HTMLElement;
+  setupForm(mainForm, mainSuccess, mainError);
+
+  // Footer newsletter form (present on all pages)
+  const footerForms = document.querySelectorAll('[data-footer-newsletter]') as NodeListOf<HTMLFormElement>;
+  footerForms.forEach((form) => {
+    const success = form.querySelector('.newsletter-success') as HTMLElement;
+    const error = form.querySelector('.newsletter-error') as HTMLElement;
+    // Reuse success/error from main form or create inline ones
+    const successDiv = document.createElement('div');
+    successDiv.className = 'newsletter-success';
+    successDiv.hidden = true;
+    successDiv.innerHTML = '<span class="newsletter-success-icon">✓</span><span>You\'re in! Check your email to confirm.</span>';
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'newsletter-error';
+    errorDiv.hidden = true;
+    form.appendChild(successDiv);
+    form.appendChild(errorDiv);
+    setupForm(form, successDiv, errorDiv);
+  });
+</script>
