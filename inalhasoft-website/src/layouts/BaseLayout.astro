@@ -21,6 +21,14 @@ import '../styles/global.css';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <!-- SEO: hreflang, canonical, geo targeting -->
+    <link rel="alternate" hreflang="en" href="https://inalha-soft.com{Astro.url.pathname}" />
+    <link rel="alternate" hreflang="en-US" href="https://inalha-soft.com{Astro.url.pathname}" />
+    <link rel="alternate" hreflang="x-default" href="https://inalha-soft.com{Astro.url.pathname}" />
+    <link rel="canonical" href="https://inalha-soft.com{Astro.url.pathname}" />
+    <meta name="geo.region" content="US" />
+    <meta name="geo.placename" content="United States" />
+    <meta name="ICBM" content="37.7749, -122.4194" />
   </head>
   <body>
     <header class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10">
@@ -70,9 +78,9 @@ import '../styles/global.css';
           <div>
             <h4 class="font-bold mb-4">Connect</h4>
             <ul class="space-y-2 text-[#a0a0a0]">
-              <li><a href="#" class="hover:text-[#ff2d95]">Discord (Coming Soon)</a></li>
+              <li><span class="text-[#666]">Discord (Coming Soon)</span></li>
               <li><a href="https://x.com/InalhaSoft" class="hover:text-[#ff2d95]" target="_blank" rel="noopener noreferrer">Twitter/X</a></li>
-              <li><a href="#" class="hover:text-[#ff2d95]">LinkedIn (Coming Soon)</a></li>
+              <li><span class="text-[#666]">LinkedIn (Coming Soon)</span></li>
               <li><a href="/privacy" class="hover:text-[#ff2d95]">Privacy Policy</a></li>
             </ul>          </div>
           <div>
@@ -102,6 +110,17 @@ import '../styles/global.css';
       </div>
     </footer>
 
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner" role="alertdialog" aria-label="Cookie Consent">
+      <div class="cookie-banner-inner">
+        <p class="cookie-banner-text">We use cookies to improve your experience. By continuing, you agree to our <a href="/privacy">Privacy Policy</a>.</p>
+        <div class="cookie-banner-actions">
+          <button id="cookie-accept" class="cookie-accept-btn">Accept</button>
+          <button id="cookie-dismiss" class="cookie-dismiss-btn">Close</button>
+        </div>
+      </div>
+    </div>
+
     <script>
       document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
         const nav = document.querySelector('nav ul');
@@ -115,6 +134,22 @@ import '../styles/global.css';
         nav?.classList.toggle('bg-[#0a0a0a]');
         nav?.classList.toggle('p-4');
       });
+
+      // Cookie consent
+      (function() {
+        const banner = document.getElementById('cookie-banner');
+        if (!banner) return;
+        if (!localStorage.getItem('inalha-cookies')) {
+          requestAnimationFrame(() => banner.classList.add('visible'));
+        }
+        document.getElementById('cookie-accept')?.addEventListener('click', () => {
+          localStorage.setItem('inalha-cookies', '1');
+          banner.classList.remove('visible');
+        });
+        document.getElementById('cookie-dismiss')?.addEventListener('click', () => {
+          banner.classList.remove('visible');
+        });
+      })();
     </script>
   </body>
 </html>
