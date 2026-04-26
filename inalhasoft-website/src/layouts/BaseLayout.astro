@@ -16,16 +16,17 @@ import '../styles/global.css';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="generator" content="Astro" />
+    <meta name="theme-color" content="#0a0a0a" />
     <title>{title} | InalhaSoft</title>
     <link rel="alternate" type="application/rss+xml" title="InalhaSoft Devlog" href="/devlog/feed.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <!-- SEO: hreflang, canonical, geo targeting -->
-    <link rel="alternate" hreflang="en" href="https://inalha-soft.com{Astro.url.pathname}" />
-    <link rel="alternate" hreflang="en-US" href="https://inalha-soft.com{Astro.url.pathname}" />
-    <link rel="alternate" hreflang="x-default" href="https://inalha-soft.com{Astro.url.pathname}" />
-    <link rel="canonical" href="https://inalha-soft.com{Astro.url.pathname}" />
+    <link rel="alternate" hreflang="en" href={`https://inalha-soft.com${Astro.url.pathname}`} />
+    <link rel="alternate" hreflang="en-US" href={`https://inalha-soft.com${Astro.url.pathname}`} />
+    <link rel="alternate" hreflang="x-default" href={`https://inalha-soft.com${Astro.url.pathname}`} />
+    <link rel="canonical" href={`https://inalha-soft.com${Astro.url.pathname}`} />
     <meta name="geo.region" content="US" />
     <meta name="geo.placename" content="United States" />
     <meta name="ICBM" content="37.7749, -122.4194" />
@@ -78,7 +79,7 @@ import '../styles/global.css';
           <div>
             <h4 class="font-bold mb-4">Connect</h4>
             <ul class="space-y-2 text-[#a0a0a0]">
-              <li><span class="text-[#666]">Discord (Coming Soon)</span></li>
+              <li><a href="https://discord.gg/3hE5v6q4" class="hover:text-[#ff2d95]" target="_blank" rel="noopener noreferrer">Discord</a></li>
               <li><a href="https://x.com/InalhaSoft" class="hover:text-[#ff2d95]" target="_blank" rel="noopener noreferrer">Twitter/X</a></li>
               <li><span class="text-[#666]">LinkedIn (Coming Soon)</span></li>
               <li><a href="/privacy" class="hover:text-[#ff2d95]">Privacy Policy</a></li>
