@@ -1,0 +1,69 @@
+Infrastructure & DevOps
+======================
+
+Virtualization & Containers
+--------------------------
+
+Proxmox VE
+  Proficiency: Advanced | Experience: 3+ years
+  Skills: VM template creation, LXC containers, ZFS storage,
+          high availability clustering, backup and recovery
+  Key Projects: Homelab Infrastructure (10+ VMs)
+
+Docker & Docker Compose
+  Proficiency: Expert | Experience: 4+ years
+  Skills: Multi-stage builds, network configuration, volume management,
+          Compose orchestration, container security hardening
+  Key Projects: All production services
+
+TrueNAS SCALE
+  Proficiency: Advanced | Experience: 2+ years
+  Skills: ZFS pool management, SMB/NFS shares, app deployment,
+          snapshot scheduling, off-site replication
+  Key Projects: Homelab NAS, backup infrastructure
+
+Networking & Security
+---------------------
+
+UFW Firewall
+  Proficiency: Advanced | Experience: 3+ years
+  Skills: Default-deny policy, port forwarding, rate limiting,
+          logging and monitoring
+
+Nginx
+  Proficiency: Advanced | Experience: 4+ years
+  Skills: Reverse proxy, SSL/TLS (CA-signed certs), load balancing,
+          caching strategies, security headers
+
+Tailscale
+  Proficiency: Advanced | Experience: 2+ years
+  Skills: Network mesh, ACLs, subnet routing, exit node setup
+
+pfSense
+  Proficiency: Intermediate | Experience: 2+ years
+  Skills: VLAN configuration, firewall rules, DHCP, DNS
+
+Security Tools
+--------------
+- Suricata IDS (7.0.3) with ET Open ruleset
+- CrowdSec LAPI with nftables bouncer
+- Lynis security auditing (fleet-wide parallel)
+- rkhunter + chkrootkit malware scanning
+- Homelab Root CA management
+
+Monitoring & Observability
+--------------------------
+- Custom React+Python dashboards with SVG sparklines
+- TrendStore metrics persistence (54+ metrics)
+- Centralized syslog (8 hosts)
+- Telegram alerting (Suricata digest, CrowdSec threats)
+- Uptime Kuma service monitoring
+
+Backup & Disaster Recovery
+--------------------------
+- Proxmox VM snapshots (hourly/daily/weekly)
+- TrueNAS ZFS snapshots with tiered retention
+- Wasabi off-site cloud backup
+- Automated restore testing
+
+Last updated: June 2026

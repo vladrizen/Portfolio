@@ -1,0 +1,55 @@
+AI & Machine Learning
+=====================
+
+LLM & AI Frameworks
+-------------------
+
+Ollama
+  Proficiency: Expert | Experience: 2+ years
+  Skills: Model deployment, API configuration, performance tuning,
+          multi-model routing, quantization (Q4_K_M, Q5_K_M)
+  Models Deployed: qwen3.6:27b, gemma4:26b, gemma4:31b,
+                   qwen3-coder:30b, mistral:latest
+
+Hermes Agent Framework
+  Proficiency: Expert | Experience: 2026
+  Skills: Agent configuration, cross-agent communication, skill development,
+          cron-based automation, exec approvals, sub-agent spawning,
+          persistent memory, session search, background task delegation
+
+Cloud LLM APIs
+  Providers: GLM-5 (business writing), Kimi K2.5 (IT operations),
+             Qwen3.5 397B (coordination), DeepSeek V4 (general)
+  Skills: API integration, cost optimization, rate limiting,
+          response caching, model fallback chains
+
+RAG & Knowledge Systems
+-----------------------
+  Proficiency: Advanced | Experience: 1+ years
+  Skills: Document chunking, vector database integration,
+          embedding model selection, retrieval optimization,
+          context window management, session memory
+
+AI Integration
+--------------
+  Telegram Bot Integration: Expert (2+ years, 4 bot accounts)
+  Automation & Scheduling: Expert (7 cron jobs, no_agent mode)
+  Skills: Bot API, multi-bot management, message routing,
+          rich formatting, file handling, cron configuration
+
+Model Performance & Optimization
+--------------------------------
+  Metrics: Response time (< 15s cloud, < 60s local),
+           token usage, context window efficiency, cache hit rates
+  Techniques: Quantization, context management, batch processing,
+              response streaming, hybrid cloud/local deployment
+
+Current Focus Areas
+-------------------
+1. Multi-Agent Systems - Scaling specialized agents
+2. Sub-Agent Delegation - Task-specific worker agents
+3. Infrastructure Automation - Fleet-wide security and monitoring
+4. Persistent Memory - Cross-session context preservation
+5. Cost Optimization - Balancing cloud vs local models
+
+Last updated: June 2026
