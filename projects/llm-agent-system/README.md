@@ -74,7 +74,7 @@ A production multi-agent AI system built on OpenClaw, featuring 3 specialized ag
 | **Jerry** | kimi-k2.5:cloud | [REDACTED] | IT operations |
 
 ### Infrastructure
-- **LLM Backend:** Ollama (http://10.27.27.150:11434)
+- **LLM Backend:** Ollama (internal VM, port 11434)
 - **Messaging:** Telegram Bot API (3 bots)
 - **Automation:** OpenClaw Cron (9 jobs)
 - **Dashboard:** Astro + Tailwind CSS

@@ -41,7 +41,7 @@ A production-grade homelab infrastructure hosting 10+ containerized services wit
         │                    │                    │
 ┌───────▼───────┐   ┌───────▼───────┐   ┌───────▼───────┐
 │  Ollama VM    │   │  Services VM  │   │  Web VM       │
-│  10.27.27.150 │   │  10.27.27.191 │   │  10.27.27.190 │
+│  [Ollama VM]  │   │ [Services VM] │   │   [Web VM]    │
 │  - LLMs       │   │  - Docker     │   │  - Astro      │
 │  - OpenClaw   │   │  - Monitoring │   │  - Tailwind   │
 └───────────────┘   └───────────────┘   └───────────────┘
@@ -51,8 +51,8 @@ A production-grade homelab infrastructure hosting 10+ containerized services wit
 
 | VLAN | Subnet | Purpose |
 |------|--------|---------|
-| **Management** | 10.27.27.0/24 | Admin access, SSH |
-| **Services** | 10.27.27.128/25 | Containerized services |
+| **Management** | [Internal subnet] | Admin access, SSH |
+| **Services** | [Internal subnet] | Containerized services |
 | **DMZ** | [REDACTED] | Public-facing services |
 
 ---
