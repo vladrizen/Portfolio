@@ -41,4 +41,4 @@ SQL
   Databases: PostgreSQL, MySQL, SQLite
   Key Projects: ABA Data App, Minecraft economy system
 
-Last updated: June 2026
+Last updated: July 2026

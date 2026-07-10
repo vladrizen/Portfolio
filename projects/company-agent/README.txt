@@ -34,4 +34,4 @@ Capabilities
 - Market research (competitor analysis, industry trends)
 - Analytics (KPI tracking, performance reports)
 
-Last updated: June 2026
+Last updated: July 2026
