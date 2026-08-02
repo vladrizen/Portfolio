@@ -76,4 +76,4 @@ Recent Work
 - Implemented Kanban task orchestration
 - Built self-improving agent loop skill
 
-Last updated: July 2026
+Last updated: August 2026
