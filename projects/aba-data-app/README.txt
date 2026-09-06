@@ -52,4 +52,4 @@ Performance
 - Data Ingestion: 10K records/second
 - Uptime: 99.9%
 
-Last updated: August 2026
+Last updated: September 2026
