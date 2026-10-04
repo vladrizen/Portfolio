@@ -98,4 +98,4 @@ I'm a **Technical Infrastructure Engineer** and **AI Systems Architect** with ex
 
 ---
 
-*Portfolio updated: September 2026
+*Portfolio updated: October 2026

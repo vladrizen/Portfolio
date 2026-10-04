@@ -36,4 +36,4 @@ Performance
 - Context Window: 128K tokens
 - Uptime: 99.8%
 
-Last updated: September 2026
+Last updated: October 2026
